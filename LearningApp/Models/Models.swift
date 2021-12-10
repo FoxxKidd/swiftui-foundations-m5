@@ -27,7 +27,7 @@ struct Content : Decodable, Identifiable{
 struct Lesson : Decodable, Identifiable{
     
     var id: Int
-    var tite: String
+    var title: String
     var video: String
     var duration: String
     var explanation: String
