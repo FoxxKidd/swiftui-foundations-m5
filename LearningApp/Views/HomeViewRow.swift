@@ -17,17 +17,16 @@ struct HomeViewRow: View {
     
     var body: some View {
         
-        ZStack{
+        ZStack {
             
             Rectangle()
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .shadow(radius: 5)
-                .aspectRatio(CGSize(width: 335, height: 175),
-                             contentMode: .fit)
+                .aspectRatio(CGSize(width: 335, height: 175), contentMode: .fit)
+                
             
-            
-            HStack{
+            HStack {
                 
                 // Image
                 Image(image)
@@ -37,8 +36,8 @@ struct HomeViewRow: View {
                 
                 Spacer()
                 
-                //Text
-                VStack(alignment: .leading, spacing: 10){
+                // Text
+                VStack (alignment: .leading, spacing: 10) {
                     
                     // Headline
                     Text(title)
@@ -50,9 +49,9 @@ struct HomeViewRow: View {
                         .font(.caption)
                     
                     // Icons
-                    HStack{
+                    HStack {
                         
-                        // Number of lessons
+                        // Number of lessons/questions
                         Image(systemName: "text.book.closed")
                             .resizable()
                             .frame(width: 15, height: 15)
@@ -67,17 +66,21 @@ struct HomeViewRow: View {
                             .frame(width: 15, height: 15)
                         Text(time)
                             .font(Font.system(size: 10))
+                        
                     }
                 }
                 .padding(.leading, 20)
             }
             .padding(.horizontal, 20)
-
-        }    }
+            
+        }
+        
+        
+    }
 }
 
 struct HomeViewRow_Previews: PreviewProvider {
     static var previews: some View {
-        HomeViewRow(image: "swift", title: "Learn Swift", description: "some description", count: "10 Lessons", time: "2 hours")
+        HomeViewRow(image: "swift", title: "Learn Swift", description: "some description", count: "10 Lessons", time: "2 Hours")
     }
 }
