@@ -9,24 +9,31 @@ import SwiftUI
 
 struct TestView: View {
     
-    @EnvironmentObject var model: ContentModel
+    @EnvironmentObject var model:ContentModel
     
     var body: some View {
         
-        if model.currentQuestion != nil{
+        if model.currentQuestion != nil {
             
-            VStack{
+            VStack {
                 // Question number
+                Text("Question \(model.currentQuestionIndex + 1) of \(model.currentModule?.test.questions.count ?? 0)")
                 
                 // Question
+                CodeTextView()
                 
-                // Answer
+                // Answers
                 
                 // Button
-                
             }
-            .navigationBarTitle("\(model.currentModule?.category ??"") Test")
+            .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
+            
         }
+        else {
+            // Test hasn't loaded yet
+            ProgressView()
+        }
+        
     }
 }
 
