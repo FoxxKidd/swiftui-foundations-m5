@@ -105,8 +105,8 @@
 				81748178276244FA00BF2DC7 /* HomeViewRow.swift */,
 				8174817B27624AE700BF2DC7 /* ContentView.swift */,
 				8174817E2763975300BF2DC7 /* ContentViewRow.swift */,
-				815B5916276A2D4E000F143B /* TestView.swift */,
 				817481822763A5B100BF2DC7 /* ContentDetailView.swift */,
+				815B5916276A2D4E000F143B /* TestView.swift */,
 				815B591327678E4F000F143B /* CodeTextView.swift */,
 				815B591A276B80CD000F143B /* RectangleCard.swift */,
 			);
